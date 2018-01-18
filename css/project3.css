@@ -1,0 +1,339 @@
+  body{
+   background-color:#000;color:#fff;font-family:arial;text-align:center;
+   font-family: 'Raleway', sans-serif;
+   overflow-x: hidden;
+  }
+
+  header{
+    position: fixed;
+    background-color: black;
+    z-index: 10;
+  }
+
+  #main{
+    padding-top: 60px;
+  }
+  
+  #custom-search-input{
+      padding: 3px;
+      border: solid 1px #E4E4E4;
+      border-radius: 6px;
+      background-color: #fff;
+  }
+
+  #custom-search-input input{
+      border: 0;
+      box-shadow: none;
+  }
+
+  #custom-search-input button{
+      margin: 2px 0 0 0;
+      background: none;
+      box-shadow: none;
+      border: 0;
+      color: #666666;
+      padding: 0 8px 0 10px;
+      border-left: solid 1px #ccc;
+  }
+
+  #custom-search-input button:hover{
+      border: 0;
+      box-shadow: none;
+      border-left: solid 1px #ccc;
+  }
+
+  #custom-search-input .glyphicon-search{
+      font-size: 23px;
+  }
+
+  #addNewPlaylist{
+    float:left;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  #search{
+    float:right;
+  }
+
+  #headerDiv{
+    width: 100%;
+  }
+
+  #playerRow{
+    position: fixed;
+    height: 247px;
+    width: 100%;
+    background-color: black;
+    z-index: 10;
+    margin-top: -6px;
+  }
+
+  .playlistWrapper {
+    display: block;
+    position: relative;
+    margin-top: 64px;
+    margin-bottom: 26px;
+    right: -20px;
+  }
+
+  .imgWrapper{
+    position: relative;
+    background-color: lightblue;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    opacity: 0.85;
+    text-align: center;
+    bottom: 27px;
+
+  }
+
+  .playlist{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    opacity: 0.85;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+  }
+
+  .imgWrapper:hover > .playlist{
+    opacity: 1;
+  }
+  .playlist:hover ~ .center .play {
+    visibility: visible;
+  }
+  .center:hover > .play {
+    visibility: visible;
+  }
+
+  .imgWrapper:hover > .btnRemove  {
+    visibility: visible;
+  }
+
+
+
+  .imgWrapper:hover > .btnEdit {
+    visibility: visible;
+  }
+  .center {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    position: absolute;
+    top: 55px;
+    left: 56px;
+  }
+  .play, .btnRemove, .btnEdit  {
+    color: black;
+    visibility: hidden;
+    cursor:pointer;
+  }
+  .play{
+    left:2px;
+  }
+  .glyphicon.glyphicon-play {
+    font-size: 30px;
+  }
+  .t1{
+    display: block;
+    width: 100px;
+    position: absolute;
+    left: 41px;
+    top: -49px;
+  }
+
+  .playerWrapper {
+    background-color: aqua;
+    height: 207px;
+    width: 590px;
+    border-radius: 100px;
+    margin: 0 auto ;
+    position: fixed;
+    right: 390px;
+    top: 80px;
+    z-index: 10;
+  }
+  audio::-webkit-media-controls-panel{
+    background-color: aqua;
+  }
+  audio{
+    position: absolute;
+    margin-right:20px;
+    margin-bottom:20px;
+    top: 12px;
+    left: 169px;
+  }
+  .playlistRow{
+    height: 210px;
+    z-index:1;
+  }
+  .modal-content{
+    color: black;
+  }
+  button{
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  .playerImage {
+    position: absolute;
+    top: 1px;
+    left: 17px;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    margin-top: 36px;
+    margin-right: 106px;
+    animation-name: spin;
+    animation-duration: 8000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+  }
+
+  @keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+  }
+
+  .form-control {
+    display: inline;
+  }
+
+  .btnRemove {
+      position: absolute;
+      left: 73px;
+      font-size: 20px;
+      top:10px;
+  }
+
+  .btnEdit{
+    position: absolute;
+    left: 39px;
+    top:10px;
+    font-size: 20px;
+  }
+
+  .playButton {
+    left: 2px;
+    top: 3px;
+  }
+  #center2{
+    left: 62px;
+    top: 82px;
+  }
+
+  .pause{
+    color:black;
+    cursor:pointer;
+  }
+  #play{
+    color:black;
+    cursor:pointer;
+    font-size: 30px;
+    top: 3px;
+    left:2px;
+  }
+  .glyphicon.glyphicon-pause {
+    font-size: 30px;
+    top:3px;
+    left:2px;
+  }
+  ol{
+    position: absolute;
+    text-align: left;
+    color: black;
+    left: 181px;
+    top: 53px;
+    overflow-y: auto;
+    height: 123px;
+    width: 250px;
+    padding-left: 25px;
+    background-color: black;
+    border-radius: 10%;
+  }
+  .previewWrapper{
+    position: relative;
+    border-radius: 50%;
+    height: 100px;
+    max-width: 100px;
+    left:60px;
+    box-shadow: 10px 10px 5px #888888;
+  }
+
+  #preview{
+    position: absolute;
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 100px;
+    right: -1px;
+    top: 1px;
+  }
+
+  .modal-dialog{
+    overflow-y: initial !important
+  }
+
+  .modal-body{
+    height: 250px;
+    overflow-y: auto;
+  }
+
+  ol li.active{
+    list-style: none;
+  }
+
+  li{
+    top: 1px;
+    left:1px;
+    color: white;
+    opacity:0.5;
+    cursor: pointer;
+  }
+
+  li:hover{
+    opacity: 1;
+  }
+
+  .active:before{
+    content:"\e072";
+    font-family: 'Glyphicons Halflings';
+    margin-left: -15px;
+  }
+
+  .active{
+    opacity: 1;
+  }
+
+  #playerEdit{
+    cursor: pointer;
+    position: absolute;
+    top: 59px;
+    left: 461px;
+    color:black;
+    font-size: 30px;
+  }
+
+  #playerRemove{
+    cursor: pointer;
+    position: absolute;
+    top: 104px;
+    left: 460px;
+    color:black;
+    font-size: 30px;
+  }
+
+  .s1{
+    width: 40%;
+  }
+
+  .g1{
+    padding: 3px;
+    background-color: white;
+    border-radius: 100%
+  }

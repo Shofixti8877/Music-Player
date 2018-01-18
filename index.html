@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Awesome Player</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="./css/project3.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="./JS/circletype.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./JS/project3.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id = "addNewPlaylist">
+        <button type="button" name="button1" data-toggle="modal" data-target="#modalAddNew1">
+        <span  class="glyphicon glyphicon-plus-sign"></span>Add new playlist
+        </button>
+      </div>
+      <div id = 'headerDiv' class="container">
+	       <div  class="row">
+           <div id = "search" class="col-md-4">
+             <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input id="searchInput" type="text" class="form-control input-lg" placeholder="Search playlists" />
+                    <span class="input-group-btn">
+                      <button class="btn btn-info btn-lg" type="button">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                    </span>
+                </div>
+              </div>
+            </div>
+	        </div>
+      </div>
+    </header>
+    <div id="main">
+      <div id ="target"></div>
+      <div class ="playlistRow row">
+        <div class="playlistWrapper">
+          <p class = "t1" id ="title">this is a song title</p>
+          <div class="playlist">
+            <span class = "glyphicon glyphicon-remove-circle remove"></span>
+            <span class = "glyphicon glyphicon-edit edit"></span>
+            <div class="center">
+              <span class = "playButton glyphicon glyphicon-play play"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal 1-->
+  <div id="modalAddNew1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <form id = "form1" action="index.html" method="get">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add New Playlist</h4>
+          </div>
+          <div class="modal-body form-group">
+            <div class="row">
+              <div class="col-md-6">
+                <input id = "playlistName" class = "form-control " placeholder="Playlist name" required></br></br>
+                <input id = "playlistURL" class = "form-control " placeholder="Playlist Image (URL)" pattern ="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required>
+              </div>
+              <div class="previewWrapper col-md-6">
+                <img id = "preview" src="" ></img>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id = "btnNext" type="submit" class="btn btn-success"  >Next</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal 2-->
+  <div id="modalAddNew2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form id = "form2" action="index.html" method="get">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Songs</h4>
+      </div>
+      <div id = "songsRow" class="modal-body form-group">
+        <p><input class = "s1 form-control songURL" ></input> <input class = "form-control songName" placeholder="Song Name"></input></p>
+        <p><input class = "s1 form-control songURL" placeholder="Song URL"></input> <input class = "form-control songName" placeholder="Song Name"></input></p>
+        <p><input class = "s1 form-control songURL" placeholder="Song URL"></input> <input class = "form-control songName" placeholder="Song Name"></input></p>
+      </div>
+      <div id = "addNew2" class="modal-footer">
+        <p><span id = "btnAddSongs" class="glyphicon glyphicon-plus-sign"></span>Add another song</p>
+        <button id = "btnSave" type="submit" class="btn btn-success">Save & Finish</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+      </form>
+    </div>
+  </div>
+  </div>
+
+<!-- Modal 3-->
+  <div id="modalDelete" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Delete playlist</h4>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure??</p>
+        </div>
+        <div class="modal-footer">
+          <button id ="btnDel" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
